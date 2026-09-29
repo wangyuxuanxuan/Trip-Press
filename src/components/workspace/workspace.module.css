@@ -1,0 +1,49 @@
+.header{flex-shrink:0;background:#fff;color:#17394C;border-bottom:4px solid #F3F6F9;padding:12px 0 0;position:relative;z-index:10}
+.headerRow{display:grid;grid-template-columns:57px minmax(0,1fr) 64px;align-items:center;gap:5px;padding:0 14px 12px}
+.tripHeading{text-align:center;min-width:0}.tripHeading strong{font-size:18px;line-height:27px;letter-spacing:.02em;font-weight:650;white-space:nowrap;display:block}
+.tripHeading>span{font-size:11px;line-height:18px;letter-spacing:.015em;color:#617D99;display:block;margin-top:3px;white-space:nowrap}
+.backLabel,.galleryLabel{background:none;border:0;min-height:48px;display:flex;align-items:center;justify-content:center;gap:3px;padding:0;color:#17394C;font-size:14px}
+.backLabel svg{width:17px;height:20px;flex-shrink:0}
+.galleryLabel{position:relative;font-size:13px;gap:4px}.galleryLabel>span:last-child{font-size:26px;line-height:1;font-weight:300}
+.galleryLabel::before{content:'';position:absolute;right:-5px;top:-9px;width:14px;height:14px;background:#FF8873;clip-path:polygon(0 0,100% 100%,18% 80%)}
+.viewSwitcher{display:grid;grid-template-columns:.95fr .85fr 1.1fr 1.3fr;padding:0 12px;gap:8px}
+.viewSwitcher button{display:flex;position:relative;align-items:center;justify-content:center;background:transparent;border:0;color:#17394C;font-size:15px;line-height:24px;white-space:nowrap;font-weight:450;min-height:48px;padding:0 0 7px;letter-spacing:.015em}
+.viewSwitcher button[aria-checked=true]{font-weight:650}.viewSwitcher button>span{position:absolute;bottom:0;width:56px;max-width:82%;height:3px;background:#FF806D;border-radius:3px;opacity:0}.viewSwitcher button[aria-checked=true]>span{opacity:1}
+.workspace{margin:0 -2px;color:#17394C;overflow-x:clip;padding-top:2px}
+.srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.deskIntro{display:flex;align-items:flex-start;justify-content:space-between;padding:10px 2px 20px;gap:12px}
+.deskIntro h2{margin:0;color:#17394C;font-size:21px;line-height:30px;font-weight:650;letter-spacing:.04em}
+.deskIntro p{margin:4px 0 0;color:#617D99;font-size:13px;line-height:21px}.deskIntro small{font-size:12px;line-height:30px;color:#617D99}
+.desk{position:relative;isolation:isolate}
+.piles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 16px;padding:0 3px 10px}
+.pileSlot{min-width:0;position:relative}.pileSlot[data-slot='0']{grid-column:1/-1}
+.stackButton{display:flex;flex-direction:column;background:none;border:0;padding:0;width:100%;min-height:64px;text-align:left;color:#17394C;transition:transform .15s;touch-action:pan-y}
+.stackButton:disabled{opacity:1;cursor:progress}.stackButton:is(:active,[data-pressed=true]):not(:disabled){transform:translateY(3px) scale(.985)}
+.photoPile{display:block;position:relative;width:100%;aspect-ratio:1;isolation:isolate;margin-bottom:12px}
+.pileSlot[data-slot='0'] .photoPile{aspect-ratio:1.62;margin-bottom:13px}
+.photoSheet{position:absolute;inset:0;display:block;background:#fff;border:1px solid #EDF0F3;box-shadow:0 3px 8px #1D394516;transform-origin:50% 85%;pointer-events:none}
+.photoSheet:nth-child(1){inset:-9px 10px 8px 8px}.photoSheet:nth-child(2){inset:-5px 3px 4px 4px}.photoSheet:nth-child(3){inset:-1px -2px 2px 1px}
+.photoSheet:last-child{border:0;background:none;box-shadow:none}
+.stackButton:is(:active,[data-pressed=true]) .photoSheet{box-shadow:0 1px 3px #1D394511}
+.groupMeta{display:flex;width:100%;justify-content:space-between;gap:6px;align-items:baseline}
+.groupName{display:block;font-size:15px;line-height:22px;font-weight:650;letter-spacing:.01em;overflow-wrap:anywhere}
+.countLabel{font-size:11px;line-height:21px;color:#617D99;white-space:nowrap;flex-shrink:0}
+.pileSlot[data-slot='0'] .groupName{font-size:19px;line-height:27px}
+.pileSlot[data-slot='0'] .countLabel{font-size:12px}
+.groupDescription{display:block;font-size:12px;line-height:20px;color:#617D99;margin-top:3px}
+.pileSlot[data-slot='0'] .groupDescription{font-size:13px}
+.status{font-size:11px;color:#617D99;padding-top:12px;margin:0}.demoNote{font-size:10px;color:#617D99;margin-top:4px}
+.credits{margin-top:5px;font-size:10px;color:#617D99}.credits summary{cursor:pointer;min-height:44px;display:flex;align-items:center;text-decoration:underline;text-underline-offset:3px}.credits p{font-size:10px}.credits a{display:inline-flex;align-items:center;min-height:44px;color:#17394C}
+.openingPile{position:absolute;z-index:50;pointer-events:none;background:white;box-shadow:4px 7px 18px #18394828}
+.openingPile>img{width:100%;height:100%;object-fit:cover}
+.workspace[data-opening=true] .piles{opacity:.18;transform:scale(.98);transition:transform .35s,opacity .35s;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.workspace[data-opening=true] .piles,.stackButton:is(:active,[data-pressed=true]):not(:disabled){transform:none}.stackButton:is(:active,[data-pressed=true]):not(:disabled){filter:brightness(.96)}}
+
+.emptyView{margin:22px 0 16px;padding:30px 22px;border:1px solid #dce9ed;background:#f8fcff;box-shadow:3px 5px 0 #eaf3f6;line-height:1.7}.emptyView>span{font-size:11px;color:#54768a;letter-spacing:2px}.emptyView h3{font-size:18px;line-height:1.5;margin:15px 0;color:#17394c}.emptyView p{font-size:13px;color:#527081;margin:10px 0}.tripHeading strong{white-space:normal;line-height:1.3;overflow-wrap:anywhere}.tripHeading span{font-size:10px}
+
+.piles:has(.pileSlot:last-child[data-slot="1"]) .pileSlot{grid-column:1/-1}.piles:has(.pileSlot:last-child[data-slot="1"]) .photoPile{aspect-ratio:1.62}
+
+.piles{grid-template-columns:minmax(0,1fr);gap:28px;padding:0 3px 10px}.pileSlot .photoPile,.pileSlot[data-slot='0'] .photoPile,.piles:has(.pileSlot:last-child[data-slot="1"]) .photoPile{aspect-ratio:1.78;margin-bottom:10px}.pileSlot .groupName,.pileSlot[data-slot='0'] .groupName{font-size:18px;line-height:26px}.pileSlot .countLabel{font-size:12px}.pileSlot .groupDescription{font-size:12px;line-height:20px}.deskIntro{padding-bottom:22px}
+
+.pileSlot .photoPile,.pileSlot[data-slot='0'] .photoPile,.piles:has(.pileSlot:last-child[data-slot="1"]) .photoPile{aspect-ratio:1.48}
+

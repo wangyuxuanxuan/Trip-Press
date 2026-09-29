@@ -1,0 +1,31 @@
+:root {
+  color-scheme: light;
+  --ivory: #F5FAFD; --cream: #FFFFFF; --apricot: #FFF0DC;
+  --coral: #FF7967; --tomato: #AD4436; --yellow: #FFE17D; --orange: #FFB465;
+  --lake: #69CFEA; --bay: #287FA3; --cobalt: #287FA3; --green: #37966D;
+  --ink: #17394C; --ink-blue: #17394C; --ink-green: #17394C;
+  --mint: #EDF8FC; --mint-deep: #FF7967; --rose-paper: #FFF0E9;
+  --muted: #62788D; --line: #E5EDF3;
+  --trip-primary: var(--coral); --trip-secondary: var(--orange);
+  --safe-top: env(safe-area-inset-top, 0px); --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --paper-texture: url('/assets/paper-fiber.svg');
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink); background: #F1F5F8; font-synthesis: none; font-size: 16px; line-height: 1.6;
+}
+* { box-sizing: border-box; }
+html, body, #root { width: 100%; height: 100%; height: 100dvh; margin: 0; overflow: hidden; }
+#root { display: grid; place-items: center; }
+button, input { font: inherit; }
+button { color: inherit; cursor: pointer; min-width: 44px; min-height: 44px; -webkit-tap-highlight-color: transparent; touch-action: manipulation; transition: transform .12s ease, box-shadow .12s ease, filter .12s ease; }
+button:is(:active, [data-pressed="true"]):not(:disabled) { transform: translateY(2px) scale(.975); box-shadow: none; filter: brightness(.94); }
+button:disabled { cursor: not-allowed; opacity: .45; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 4px; }
+h1,h2,p { margin: 0; }
+h1 { font-size: 30px; font-weight: 800; line-height: 1.32; letter-spacing: -.04em; }
+h1:focus { outline: none; }
+h2 { font-size: 1.06rem; font-weight: 750; }
+svg { flex-shrink: 0; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  button:is(:active, [data-pressed="true"]):not(:disabled) { transform: none; filter: brightness(.88); box-shadow: inset 0 0 0 2px currentColor; }
+}

@@ -1,0 +1,24 @@
+# 2026-09-27 贴纸素材
+
+Mode: built-in image_gen. No live generation service integrated.
+
+Outputs: public/assets/stickers/japan-v2.png, landscape-v2.png, train-v2.png. Original alpha retained. SVG viewports isolate atlas regions without re-encoding the artwork. Source correspondence and manual anchors: src/data/editorial.ts.
+
+## japan
+
+Use case: stylized-concept. Create one production TRANSPARENT sticker atlas for a refined travel scrapbook app. Input 1 Osaka evening castle is subject reference, input 2 Osaka castle through blossom is subject reference, input 3 Fuji pagoda is subject reference, input 4 is STYLE ONLY (ignore its photos and black screenshot UI).
+Canvas square. Exactly SIX separate stickers, STRICT 3 columns by 2 rows equal cells, generous transparent gutters, each object entirely inside its own cell. No text, no grid, no full background, no labels. Row-major subjects: 1) Osaka castle as in first reference: delicate pale walls, turquoise tiered roofs with gold trim, small pink blossoms at base; 2) a branching spray of pink cherry blossoms from first reference; 3) the red spherical paper lantern in the lower right of first reference, dark cap, simplified markings; 4) the red multi-tier pagoda in Fuji reference, keep green roofs and angled side view; 5) snowcapped Mount Fuji and blue foothills with a few blossom sprigs, cutout little landscape; 6) elegant white-pink blossom branch from second reference, horizontally spreading.
+Art direction: beautiful sophisticated editorial gouache travel illustrations, layered hand-painted pigments, subtle paper fibers and dry-brush flecks, architectural specificity, accurate silhouettes and details from reference, soft clean white die-cut paper border and subtle tiny shadow. Fresh clear colors, bright teal, cherry pink, coral vermilion, sky blue. White on transparent; NOT flat generic SVG icons, NOT kawaii or cartoon faces, not 3D, no gray cast, no yellow overall wash, no invented landmarks. Use whole cell but leave 8% margin.
+
+## landscape
+
+Use case: stylized-concept. Production transparent travel sticker atlas, sophisticated gouache paper illustration. Input 1 alpine lake photo and Input 2 colorful coastal village photo are subject references; Input 3 is STYLE ONLY, ignore its black screenshot chrome.
+Exactly six separate die-cut stickers in strict 3 columns x 2 rows on a square transparent canvas. Each stays inside its own equal rectangular cell with 8 percent padding and transparent gutters. Row1 from alpine photo: 1 mountains and turquoise lake as a landscape shaped vignette; 2 wooden rowboats moored together, accurate warm wooden hulls; 3 alpine conifer grove and small strip of emerald water. Row2 from coastal village photo: 4 clustered colorful Ligurian houses on rocky promontory, accurate small windows and terracotta facades; 5 the small boats beside the stone quay; 6 turquoise sea and coastline fragment.
+Finely layered opaque gouache with elegant editorial detail, subtle drybrush and paper fibers. Beautiful mature travel journal art, white die-cut edges thin soft shadow, fresh clear emerald water and teal, warm coral and orange architecture, pale gray-blue mountain. No murky overall gray, no uniform yellow tint. No cartoon faces, no people, no fantasy added objects, no simplified clipart icons, no 3D. No lettering, no label, no border around canvas, no solid background. Each sticker self-contained, large enough for app covers.
+
+## train
+
+Use case: stylized-concept. One transparent sticker atlas for a refined travel scrapbook App. Subject references: image1 is blue/cream train on snowy Japanese seaside; image2 is silver/green coastal train on dry tracks. Image3 style reference only (ignore black screenshot UI and do NOT copy its green train).
+Exactly SIX isolated die-cut stickers, strict 3 columns x 2 rows equal cells, on square transparent canvas. 8% internal margins, no overlap across cells. Row1: 1 blue and cream Japanese train nose with short carriage section, keep its characteristic blue color, cream framed windows and headlights; 2 its blue sea horizon and snowy shoreline as landscape fragment; 3 the triangular station sign and a little snow at base from photo1. Row2: 4 silver gray train with green windows and front from photo2 with '991' optional; 5 sweeping diagonal railway tracks with gravel and pale sea at side, from photo2; 6 a narrow blue coastal water fragment and horizon from photo2. Strict source-faithful silhouettes, no invented architecture, no people.
+Medium sophisticated gouache, subtle handmade paper fibers, soft drybrush, layered rich pigments with small highlights. Bright fresh blue and navy, pale cream/white, soft green, natural neutral gravel. Thin white cutout edges, slight paper shadow. Not vector clipart, not toy cartoon, not 3D, no beige wash, no labels/text except existing train marking, no solid sheet background, no grid lines.
+

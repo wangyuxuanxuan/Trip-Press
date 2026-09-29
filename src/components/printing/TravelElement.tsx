@@ -1,0 +1,22 @@
+import { useId,useState } from 'react';
+export const travelElements=['umbrella','drink','sign','lantern','shirt','ticket','person','road'] as const;
+export type TravelElementKind=typeof travelElements[number];
+export const elementLabels:Record<TravelElementKind,string>={umbrella:'红色雨伞',drink:'红色饮料',sign:'红色招牌',lantern:'红色灯笼',shirt:'红色衣服',ticket:'红色车票',person:'同行者表情',road:'街道路牌'};
+export function TravelElement({kind,className='',decorative=false}:{kind:TravelElementKind;className?:string;decorative?:boolean}){
+ const clip=useId().replace(/:/g,'');
+ const [photoFailed,setPhotoFailed]=useState(false);
+ const cream='#FFFFFF',red='#FF7967',orange='#FFB465',blue='#69CFEA',yellow='#FFE17D',green='#37966D';
+ const portrait='M37 10Q54 4 69 14L72 31Q78 46 65 57L87 64L93 121L10 121L15 66L36 58Q27 45 35 29Z';
+ return <svg className={className} width="100" height="130" viewBox="0 0 100 130" role={decorative?undefined:'img'} aria-label={decorative?undefined:elementLabels[kind]} aria-hidden={decorative?true:undefined} data-travel-element={kind}>
+  <g stroke={cream} strokeWidth="6" strokeLinejoin="round" strokeLinecap="round">
+   {kind==='umbrella'&&<><path d="M50 17V91q0 24 17 16" fill="none" strokeWidth="12"/><path d="M8 61Q10 21 50 20Q87 24 92 61Q78 52 67 63Q53 53 40 63Q23 52 8 61Z" fill={red}/><path d="M50 22Q30 34 27 58M50 22Q70 35 72 58" fill="none" stroke={orange} strokeWidth="3"/><path d="M50 61V94q1 17 15 11" fill="none" stroke="#17394C" strokeWidth="4"/><path d="m13 83-4 7m74-13-3 7" stroke={blue} strokeWidth="4"/></>}
+   {kind==='drink'&&<><path d="M28 44 35 112H72L80 44Z" fill={red}/><path d="M24 40H82V51H25Z" fill={orange}/><path d="m56 41 9-25 19-4" fill="none" strokeWidth="10"/><path d="m56 41 9-25 19-4" fill="none" stroke={blue} strokeWidth="4"/><circle cx="53" cy="80" r="14" fill={yellow} strokeWidth="2"/><path d="m45 81 6 5 11-12" fill="none" stroke={cream} strokeWidth="3"/></>}
+   {kind==='sign'&&<><path d="M15 19H83V102L76 112H9V27Z" fill={red}/><path d="M24 29H72V97H22Z" fill={yellow} strokeWidth="2"/><text x="47" y="57" textAnchor="middle" fontSize="23" fontWeight="800" fill="#17394C" stroke="none">大</text><text x="47" y="84" textAnchor="middle" fontSize="23" fontWeight="800" fill="#17394C" stroke="none">阪</text><path d="M9 45H2m9 36H2" stroke={blue} strokeWidth="5"/></>}
+   {kind==='lantern'&&<><path d="M49 9v15m0 78v18" strokeWidth="9"/><path d="M28 25Q7 38 17 82Q21 103 50 103Q84 101 86 73Q93 40 72 25Z" fill={red}/><path d="M29 27Q16 64 32 100M69 28Q83 66 67 101M48 29v70" stroke={orange} strokeWidth="3" fill="none"/><path d="M27 22H72V32H27Zm5 75h37v11H32Z" fill="#17394C" strokeWidth="3"/><path d="M40 58h20M49 47v29" stroke={cream} strokeWidth="4"/><path d="m43 109-3 12m13-12 3 12" stroke={yellow} strokeWidth="3"/></>}
+   {kind==='shirt'&&<><path d="m29 25-23 20 17 25 10-7-3 48 44 1-3-49 10 7 15-24-24-21-13 8H44Z" fill={red}/><path d="M40 29q11 22 25 0" stroke={orange} strokeWidth="4" fill="none"/><path d="m35 68 35 1m-36 8 36 1" stroke={cream} strokeWidth="4"/><path d="M36 98h9v9h-9" fill={yellow} strokeWidth="0"/></>}
+   {kind==='ticket'&&<><path d="M9 37 87 23l10 62-77 15-4-22q13-7-4-15Z" fill={red}/><path d="m63 28 12 63" stroke={cream} strokeWidth="2" strokeDasharray="3 4"/><text x="23" y="58" fill="#243A2E" stroke="none" fontSize="12" fontWeight="800" transform="rotate(-10 23 58)">OSAKA</text><path d="m29 69 28-5m-25 14 17-3" stroke={yellow} strokeWidth="4"/><path d="m77 45 3 17" stroke={cream} strokeWidth="5"/></>}
+   {kind==='road'&&<><path d="M49 26v93" strokeWidth="12"/><path d="M49 26v93" stroke={green} strokeWidth="5"/><path d="M9 26h70l13 13-13 13H9Z" fill={blue}/><path d="M89 61H22L8 73l14 12h67Z" fill={green}/><text x="47" y="44" textAnchor="middle" fill="#17394C" stroke="none" fontSize="11" fontWeight="700">道頓堀</text><text x="49" y="77" textAnchor="middle" fill={cream} stroke="none" fontSize="10">NAMBA</text></>}
+   {kind==='person'&&<><defs><clipPath id={clip}><path d={portrait}/></clipPath></defs><path d={portrait} fill={cream} strokeWidth="9"/><image href="./assets/photos/companion.jpg" x="0" y="0" width="100" height="150" visibility={photoFailed?'hidden':undefined} onError={()=>setPhotoFailed(true)} clipPath={`url(#${clip})`}/>{photoFailed&&<g stroke="none" data-person-image-failed="true"><rect x="17" y="35" width="68" height="65" fill="#FFF0DC"/><text x="50" y="62" textAnchor="middle" fontSize="9" fill="#17394C">照片暂时</text><text x="50" y="78" textAnchor="middle" fontSize="9" fill="#17394C">无法加载</text></g>}</>}
+  </g>
+ </svg>;
+}

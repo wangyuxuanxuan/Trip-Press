@@ -1,0 +1,36 @@
+.collection{padding:19px 0 14px;color:#17394C}
+.intro{margin:0 0 25px}
+.intro h1{margin:0;font-size:clamp(26px,7.1vw,30px);line-height:1.4;letter-spacing:-.035em;font-weight:650;white-space:nowrap;color:#14364A}
+.intro p{font-size:15px;line-height:24px;letter-spacing:.04em;margin:8px 0 0;color:#6B7D91}
+.printerButton{display:block;position:relative;width:100%;aspect-ratio:1.23;border:0;background:none;padding:0;isolation:isolate;color:#17394C;transition:transform .15s;touch-action:manipulation}
+.printerPhotos{position:absolute;left:7%;right:7%;height:52%;top:0;display:flex;align-items:flex-start;justify-content:center;z-index:0}
+.printerPhotos>span{display:block;position:absolute;top:7%;left:0;width:40%;height:100%;padding:6px 6px 14px;background:#fff;transform:rotate(-12deg);box-shadow:0 2px 12px #18394822;overflow:hidden}
+.printerPhotos>span:nth-child(2){left:31%;top:0;transform:rotate(-3deg);z-index:2}
+.printerPhotos>span:nth-child(3){left:61%;top:10%;transform:rotate(12deg)}
+.printerPhotos img,.printerPhotos svg{display:block;width:100%;height:100%;object-fit:cover}
+.printerBody{position:absolute;width:100%;height:52%;top:42%;left:0;z-index:3;filter:drop-shadow(0 7px 5px #24455420)}
+.printedAction{position:absolute;z-index:4;left:13%;right:13%;top:78%;height:24%;display:flex;align-items:center;justify-content:center;gap:12px;background:linear-gradient(#CDD0D1 0,#F4F5F5 16%,#fff 37%,#fff 100%);border:3px solid #FF9582;border-top:0;border-radius:0 0 9px 9px;box-shadow:0 5px 8px #243E4924;clip-path:polygon(6% 0,94% 0,100% 93%,99% 98%,97% 100%,3% 100%,1% 98%,0 93%);font-size:19px;font-weight:650;letter-spacing:.02em;padding:12px 12px 2px}
+.printedAction>svg:first-child{width:31px;height:34px;color:#FF7968;flex-shrink:0}.printedAction>svg:last-child{width:15px;height:24px;flex-shrink:0}
+.printerButton:is(:active,[data-pressed=true]){transform:translateY(3px) scale(.985)}
+.printerHint{text-align:center;color:#6B7D91;font-size:12px;line-height:20px;margin:14px 0 31px}
+.collectionLabel{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 17px}
+.collectionLabel h2{font-size:20px;line-height:28px;font-weight:650;letter-spacing:.03em;margin:0}.collectionLabel span{font-size:13px;color:#6B7D91}
+.books{display:flex;gap:14px;align-items:flex-start;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:5px;overscroll-behavior-x:contain;scrollbar-width:none;touch-action:pan-x pan-y pinch-zoom;margin:0 -5px;padding:5px 5px 8px}
+.books::-webkit-scrollbar{display:none}.books>.travelBook{flex:0 0 calc((100% - 53px)/3.55);scroll-snap-align:start;min-width:80px;max-width:104px}
+.shelfControls{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:2px;color:#6B7D91;font-size:10px}.shelfControls>div{display:flex;gap:4px}.shelfControls button{width:44px;height:44px;min-height:44px;background:transparent;border:0;color:#345C70;font-size:26px;line-height:1}.shelfControls button:disabled{opacity:.3}
+.travelBook{min-width:0;display:block;width:100%;padding:0;background:none;border:0;text-align:center;transition:transform .15s;color:#17394C}
+.bookCover{display:block;position:relative;isolation:isolate;aspect-ratio:.66;background:#fff url('/assets/paper-fiber.svg');border:1px solid #eef0f2;border-radius:2px 4px 4px 2px;box-shadow:2px 3px 6px #18394816;overflow:visible}
+.bookSpine{position:absolute;inset:0 auto 0 0;width:10%;border-radius:2px 0 0 2px;background:var(--book-color);box-shadow:inset 2px 0 0 #ffffff66,inset -1px 0 0 #24465712}
+.bookPlace{position:absolute;top:8%;left:20%;right:3%;font-size:9px;font-stretch:condensed;letter-spacing:0;color:var(--album-ink);font-weight:750;text-align:left;overflow-wrap:anywhere}
+.bookPlace small{display:block;color:#6B7D91;font-size:5px;font-weight:650;letter-spacing:.06em;margin-top:2px}
+.bookPhoto{position:absolute;left:20%;top:28%;width:70%;height:58%;transform:rotate(-6deg);overflow:hidden;border-radius:1px;clip-path:polygon(0 3%,100% 0,98% 98%,2% 100%)}
+.bookPhoto img,.bookPhoto svg{width:100%;height:100%;object-fit:cover;display:block}
+.bookSticker{position:absolute;z-index:3;left:10%;bottom:3%;width:45%;height:41%;transform:rotate(-12deg)}
+.bookStickerSmall{position:absolute;z-index:4;right:0;bottom:0;width:43%;height:39%;transform:rotate(11deg)}
+.bookTitle{display:block;font-size:clamp(10px,2.8vw,12px);font-weight:500;letter-spacing:-.04em;margin-top:12px;white-space:nowrap;line-height:19px}
+.bookDate{display:block;font-size:11px;font-variant-numeric:tabular-nums;color:#6B7D91;line-height:20px}
+.travelBook:is(:active,[data-pressed=true]){transform:translateY(3px) scale(.97)}
+@media(min-width:431px){.intro h1{font-size:30px}.bookTitle{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.printerButton:is(:active,[data-pressed=true]),.travelBook:is(:active,[data-pressed=true]){transform:none;filter:brightness(.96)}}
+
+.bookCover:has([data-sticker-id]) .bookPhoto{transform:none;top:23%;height:68%;left:12%;width:76%;box-shadow:none;border:0;background:none}.bookCover:has([data-sticker-id]) .bookSticker{width:38%;height:35%;right:0;left:auto;bottom:0;transform:rotate(8deg)}

@@ -1,0 +1,124 @@
+{
+  "captionKeyboard": {
+    "dialog": {
+      "x": 0,
+      "y": 24,
+      "width": 393,
+      "height": 326
+    },
+    "input": {
+      "x": 24,
+      "y": 112.390625,
+      "width": 345,
+      "height": 157.9375
+    },
+    "done": {
+      "x": 201.5,
+      "y": 299.921875,
+      "width": 167.5,
+      "height": 50
+    }
+  },
+  "environment": "Windows Microsoft Edge, 393x852 emulation; not a physical phone",
+  "baseline": {
+    "Documents": 2,
+    "JSEventListeners": 221,
+    "Nodes": 342,
+    "JSHeapUsedSize": 5997948
+  },
+  "heapCycles": [
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 6749444
+    },
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 6986524
+    },
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 7205964
+    },
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 7314780
+    },
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 7370052
+    },
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 7420896
+    },
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 7434916
+    },
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 7474012
+    },
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 7509156
+    },
+    {
+      "Documents": 2,
+      "JSEventListeners": 364,
+      "Nodes": 342,
+      "JSHeapUsedSize": 7544832
+    }
+  ],
+  "afterLoops": {
+    "Documents": 2,
+    "JSEventListeners": 364,
+    "Nodes": 342,
+    "JSHeapUsedSize": 7544832
+  },
+  "animation": {
+    "frames": 124,
+    "medianMs": 16.700000000000728,
+    "p95Ms": 18.400000000001455,
+    "over50ms": 1,
+    "longTasks": []
+  },
+  "keyboard": {
+    "dialog": {
+      "x": 0,
+      "y": 41.015625,
+      "width": 393,
+      "height": 308.984375
+    },
+    "input": {
+      "x": 24,
+      "y": 168.40625,
+      "width": 345,
+      "height": 52
+    },
+    "done": {
+      "x": 201.5,
+      "y": 262,
+      "width": 167.5,
+      "height": 48
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.printing{height:100%;min-height:0;display:flex;flex-direction:column;overflow:auto;scrollbar-width:none;background:var(--cream) var(--paper-texture)}
+.header{display:flex;justify-content:space-between;align-items:center;flex-shrink:0;padding:12px 17px 10px;border-bottom:1px dashed #D5DFCF}
+.header button{display:flex;align-items:center;gap:6px;font-size:12px;min-height:46px;border:0;background:var(--apricot) var(--paper-texture);padding:6px 9px;transform:rotate(-2deg)}
+.header svg{width:18px}.header>span{font:11px Georgia,serif;letter-spacing:2px;color:var(--tomato)}
+.intro{padding:15px 23px 0;flex-shrink:0}.intro h1{text-wrap:balance;font:700 25px/1.4 Georgia,"Songti SC",serif;letter-spacing:0;color:var(--tomato)}.intro p{font-size:11px;color:#62788D;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:6px}
+.theatre{position:relative;isolation:isolate;flex:1;min-height:350px;max-height:500px;overflow:hidden;margin-top:5px}
+.deskLines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.marginNote{position:absolute;left:14px;bottom:110px;writing-mode:vertical-rl;transform:rotate(180deg);font:8px Georgia,serif;letter-spacing:1.8px;color:#bc8c5b}
+.machineZone{position:absolute;width:100%;height:210px;bottom:90px;left:0}
+.machine{position:absolute;width:282px;height:216px;left:calc(50% - 141px);top:0;z-index:3;filter:drop-shadow(0 4px 2px #17394C12)}
+.inputStack{position:absolute;width:108px;height:90px;left:calc(50% - 54px);top:calc(100% - 307px);z-index:2;pointer-events:none}
+.inputStack img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:5px solid #fffdfa;border-bottom-width:15px;box-shadow:1px 3px 4px #17394C30}
+.inputStack span{position:absolute;bottom:-16px;left:0;right:0;text-align:center;font-size:9px;color:var(--tomato);background:var(--cream)}
+.elements{position:absolute;inset:0;pointer-events:none;z-index:5}
+.element{position:absolute;width:56px;height:87px;filter:drop-shadow(1px 3px 2px #17394C22);text-align:center}
+.element svg{width:100%;height:70px}.element>span{font-size:8px;color:var(--ink);display:block;margin-top:-7px;background:var(--cream);white-space:nowrap;padding:0 2px}
+.element[data-kind="umbrella"]{left:6%;top:8%}.element[data-kind="drink"]{right:7%;top:9%}
+.element[data-kind="sign"]{left:26%;top:2%;width:48px}.element[data-kind="lantern"]{right:27%;top:2%;width:47px}
+.element[data-kind="shirt"]{left:1%;top:36%;width:55px}.element[data-kind="ticket"]{right:0;top:37%;width:61px}
+.element[data-kind="person"]{left:4%;bottom:17%;width:68px;height:100px}.element[data-kind="person"] svg{height:86px}
+.element[data-kind="road"]{right:5%;bottom:17%;width:58px}
+.personSource{position:absolute;left:13%;bottom:22%;width:50px;height:62px;transform:rotate(-8deg);z-index:1;padding:3px;background:#fffdfa;box-shadow:1px 2px 5px #17394C22}
+.personSource img{width:100%;height:45px;object-fit:cover;object-position:center 15%}.personSource span{font-size:6px;display:block;text-align:center}
+.outputTray{position:absolute;top:137px;left:calc(50% - 89px);width:178px;height:169px;overflow:hidden;z-index:4;pointer-events:none}
+.outputPaper{position:absolute;top:0;left:25px;width:127px;height:119px;background:#fffdfa var(--paper-texture);padding:7px;border:1px solid #D5DECE;box-shadow:1px 3px 6px #17394C25;color:var(--tomato)}
+.outputPaper>b{display:block;font:700 12px Georgia,serif;letter-spacing:1px;margin-bottom:4px}.outputPaper>img{width:100%;height:66px;object-fit:cover}.outputPaper small{display:block;font-size:6px;color:var(--ink);margin-top:3px}
+.miniStickers{display:flex;height:66px;align-items:center;background:var(--apricot)}.miniStickers svg{width:36px;height:57px}
+.paperCollage{position:relative;height:64px;background:var(--yellow)}.paperCollage img{width:75%;height:58px;object-fit:cover;transform:rotate(-4deg);border:2px solid #fffdfa}.paperCollage svg{position:absolute;right:-3px;bottom:-5px;width:45px;height:63px;transform:rotate(9deg)}
+.slotLip{position:absolute;z-index:6;top:136px;left:calc(50% - 90px);width:180px;height:5px;background:var(--ink-blue);border-top:2px solid var(--lake);border-radius:2px}
+.crumpledPaper{position:absolute;top:0;left:7px;width:164px;height:140px;filter:drop-shadow(1px 4px 3px #17394C26)}.crumpledPaper>svg{width:100%;height:100%}.crumpledPaper>span{position:absolute;inset:43px 0 0;text-align:center;font:700 17px/1.7 Georgia,"Songti SC",serif;color:var(--tomato);transform:rotate(-5deg)}
+.doneStamp{position:absolute;z-index:7;right:23px;bottom:14px;padding:7px 11px;border:2px solid var(--green);color:var(--green);font-size:14px;line-height:1.2;transform:rotate(-12deg);background:var(--cream) var(--paper-texture)}.doneStamp small{font:6px Georgia,serif;letter-spacing:1px}
+.progressArea{padding:0 22px;flex-shrink:0}.status{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--tomato);min-height:32px}.status small{font:12px Georgia,serif}
+.steps{list-style:none;padding:5px 0 0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:7px 9px}
+.steps li{display:flex;align-items:center;gap:7px;font-size:10px;color:#62788D;padding:5px 0;border-bottom:1px dashed #D5DFCF}
+.steps li>span{font:11px Georgia,serif;color:#62788D}.steps li[data-current="true"]{color:var(--tomato);font-weight:700;border-bottom-color:var(--coral)}.steps li[data-done="true"]{color:var(--green)}
+.footer{padding:6px 22px max(14px,var(--safe-bottom));flex-shrink:0}.footer>p{font-size:10px;color:#62788D;text-align:center;margin-top:5px}.demoButton{display:block;margin:0 auto;padding:5px 10px;min-height:44px;background:none;border:0;color:#62788D;font-size:10px;text-decoration:underline;text-underline-offset:4px}
+.footer>button:not(.demoButton){margin-top:8px;min-height:54px}
+.srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-height:760px){.intro{padding-top:10px}.intro h1{font-size:22px}.theatre{min-height:310px}.header{padding-top:6px}.element[data-kind="sign"],.element[data-kind="lantern"]{top:0}.footer>p{margin-top:0}}
+
+.header button{background:transparent;transform:none;border:0}.intro h1{font-family:inherit;color:#17394c;font-size:27px}.intro p{color:#62788d}.steps li[data-current=true]{color:#ad4436}.footer p{color:#62788d}

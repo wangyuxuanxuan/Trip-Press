@@ -45,4 +45,3 @@ Node.js 22+、pnpm；执行 `pnpm install`、`pnpm dev`，打开 http://127.0.0.
 旧 `ImportDesk.tsx` 与 `TravelContainer.tsx` 保留为未使用组件，不再连接到用户流程。风景来源见 [风景照片说明](public/assets/landscapes/attribution.html)，大阪素材见 [照片许可](public/assets/photos/attribution.html)。
 
 最新改版设计见 [首页与收藏设计](docs/superpowers/specs/2026-09-27-home-collection-design.md)。前轮手机测试记录为 [2026-09-26 验证](docs/mobile-audit.md)，本轮见 [2026-09-27 验证](docs/home-collection-validation.md)。浏览器模拟不替代 iOS/Android 真机键盘、照片库权限、硬件帧率和峰值内存检查。
-

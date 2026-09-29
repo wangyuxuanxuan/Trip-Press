@@ -1,0 +1,8 @@
+import {test,expect} from '@playwright/test';
+test('朋友圈九宫格与四宫格，好友保持单图预览',async({page},info)=>{
+ await page.goto('/');await page.locator('[data-trip-box="osaka-2026"]').click();await page.getByRole('button',{name:'打开相册',exact:true}).click();await page.locator('[data-group-id="osaka-spring"]').click();await page.getByRole('button',{name:'分享这一组',exact:true}).click();
+ const dialog=page.getByRole('dialog',{name:'分享这一组'});await dialog.getByRole('button',{name:'微信',exact:true}).click();await dialog.getByRole('button',{name:'朋友圈',exact:true}).click();const grid=dialog.locator('[data-moments-count]');await expect(grid).toHaveAttribute('data-moments-count','9');await expect(grid).toHaveAttribute('data-columns','3');await expect(grid.locator('[data-publish-photo]')).toHaveCount(9);await page.screenshot({path:info.outputPath('moments-nine.png')});
+ await dialog.getByRole('button',{name:'发给好友',exact:true}).click();await expect(grid).toHaveCount(0);await expect(dialog.locator('[data-publish-photo]')).toHaveCount(1);await dialog.getByRole('button',{name:'关闭分享这一组'}).click();await page.getByRole('button',{name:'← 返回照片工作桌',exact:true}).click();await page.getByRole('radio',{name:'同一种感觉',exact:true}).click();await page.locator('[data-group-id="japan-pink"]').click();await page.getByRole('button',{name:'分享这一组',exact:true}).click();await dialog.getByRole('button',{name:'微信',exact:true}).click();await dialog.getByRole('button',{name:'朋友圈',exact:true}).click();await expect(grid).toHaveAttribute('data-moments-count','4');await expect(grid).toHaveAttribute('data-columns','2');await page.screenshot({path:info.outputPath('moments-four.png')});
+});
+
+
