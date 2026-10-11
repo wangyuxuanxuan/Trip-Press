@@ -12,14 +12,14 @@ const regions:Record<ArtSticker['atlas'],number[][]>={
  coast:[[39,188,451,448],[491,108,337,530],[831,257,398,378],[36,702,474,484],[511,722,307,465],[896,674,331,506]],
  train:[[80,240,333,359],[481,274,319,326],[941,228,171,381],[86,733,362,362],[470,784,337,317],[926,732,223,386]],
 };
-export const stickerRegion=(s:ArtSticker)=>s.medium==='photo'&&photoCutouts[s.photoId]?photoCutouts[s.photoId].viewBox:regions[s.atlas][s.cell].join(' ');
+export const stickerRegion=(s:ArtSticker)=>s.medium==='photo'&&photoCutouts[s.photoId]?photoCutouts[s.photoId].viewBox:`0 0 ${regions[s.atlas][s.cell][2]} ${regions[s.atlas][s.cell][3]}`;
 export function StickerInk({sticker}:{sticker:ArtSticker}){
- const id=useId();const [x,y,width,height]=regions[sticker.atlas][sticker.cell];
+ const id=useId();const [, ,width,height]=regions[sticker.atlas][sticker.cell];
  if(sticker.medium==='photo'){
   const cutout=photoCutouts[sticker.photoId],path=cutout?.path??sceneryCutout;
   const border=cutout?Math.min(...cutout.viewBox.split(' ').slice(2).map(Number))*.055:12;
   return <g data-photo-cutout={cutout?'subject':'scenery'}><defs><clipPath id={id}><path d={path}/></clipPath></defs><path d={path} fill="#fff" stroke="#fff" strokeWidth={border} strokeLinejoin="round"/><image href={editorialPhoto(sticker.photoId)?.src} x="0" y="0" width={cutout?1200:300} height={cutout?800:350} preserveAspectRatio={cutout?'none':'xMidYMid slice'} clipPath={`url(#${id})`}/></g>;
- } return <><defs><clipPath id={id}><rect x={x} y={y} width={width} height={height}/></clipPath></defs><image href={`./assets/stickers/${sticker.atlas}-v2.png`} width="1254" height="1254" clipPath={`url(#${id})`}/></>;
+ } return <image href={`./assets/sticker-cells/${sticker.atlas}-${sticker.cell}.png`} width={width} height={height}/>;
 }
 export function StickerArt({sticker,className}: {sticker:ArtSticker;className?:string}){
  return <svg className={className} viewBox={stickerRegion(sticker)} role="img" aria-label={sticker.title} data-sticker-id={sticker.id} data-source-photo={sticker.photoId} style={{overflow:'hidden'}}><StickerInk sticker={sticker}/></svg>;

@@ -81,10 +81,9 @@
 
 .detailSpace { overflow:hidden; }
 .detailSpace .scene { height:100%; }
-.freshHeader{padding:24px 22px 12px;background:#fff}
-.freshHeader .brand{font:700 25px/1.1 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;letter-spacing:1px;color:#17394C;gap:8px}
-.freshHeader .brandMark{width:44px;height:46px;transform:none;filter:none}
-.freshHeader .brandEnglish{font:600 8px/1.6 sans-serif;letter-spacing:2.6px;color:#6B7D91;margin-top:5px}
+.freshHeader{padding:8px 22px;background:#fff}
+.freshHeader .brand{display:flex;align-items:center;min-width:0}
+.freshHeader .brandLogo{display:block;width:120px;max-width:100%;height:auto}
 .freshHeader .infoButton{background:none;border:0;color:#8C9EAB;opacity:.8}
 
 .collectionEntry{display:flex;align-items:center;gap:4px;min-height:48px;background:transparent;border:0;padding:4px 0 4px 8px;color:#17394c;font-size:12px;white-space:nowrap}
